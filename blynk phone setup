@@ -1,0 +1,106 @@
+## Step 7: Configure Mobile Dashboard
+
+Open the Blynk Mobile App.
+
+Select your device.
+
+Tap:
+
+```text
+Edit Dashboard
+```
+
+Add:
+
+### Switch Widget
+
+Configure:
+
+| Setting | Value |
+|----------|--------|
+| Datastream | V0 |
+| Mode | Switch |
+
+Save the dashboard.
+
+---
+
+## Step 8: Test the System
+
+1. Power ON ESP32.
+2. Connect to Wi-Fi.
+3. Wait for Blynk connection.
+4. Open the Blynk App.
+5. Toggle the Switch Widget.
+
+Expected Result:
+
+```text
+Switch ON  → Relay ON  → Bulb ON
+
+Switch OFF → Relay OFF → Bulb OFF
+```
+
+---
+
+## 📊 Dashboard Layout
+
+```text
+┌─────────────────────────┐
+│     Home Automation     │
+├─────────────────────────┤
+│                         │
+│      Relay Switch       │
+│                         │
+│         ON/OFF          │
+│                         │
+└─────────────────────────┘
+```
+
+---
+
+## 🔍 Troubleshooting
+
+### Device Offline
+
+Check:
+
+- Wi-Fi Name (SSID)
+- Wi-Fi Password
+- Internet Connection
+
+---
+
+### Relay Not Switching
+
+Check:
+
+- GPIO Pin Number
+- Relay Wiring
+- V0 Datastream Configuration
+
+---
+
+### Authentication Failed
+
+Verify:
+
+```cpp
+BLYNK_TEMPLATE_ID
+BLYNK_TEMPLATE_NAME
+BLYNK_AUTH_TOKEN
+```
+
+are copied correctly from the Blynk Console.
+
+---
+
+### No Response from Mobile App
+
+Verify:
+
+- Device is Online
+- Switch Widget is linked to V0
+- ESP32 is connected to Blynk Cloud
+
+---
