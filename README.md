@@ -330,17 +330,6 @@ pio device monitor
 
 ---
 
-# 📷 Project Images
-
-Create an `images` folder and add:
-
-```text
-images/
-├── circuit-diagram.png
-├── hardware-setup.jpg
-├── blynk-dashboard.jpg
-└── project-cover.png
-```
 
 Then display them:
 
@@ -401,7 +390,9 @@ Always:
 
 # 👨‍💻 Author
 
-## Manish Pal
+---
+
+#  Manish Pal
 
 **B.Tech – Electronics & Communication Engineering (ECE)**
 
