@@ -1,67 +1,38 @@
-# 📱 Blynk IoT Setup Guide
+## 📱 Blynk Mobile App Setup
 
-Get your Home Automation system connected to the cloud in just a few minutes.
+Setting up the mobile dashboard takes less than a minute.
 
----
+### 1️⃣ Open Blynk App
+Select your device and tap **Edit Dashboard**.
 
-## 🚀 Step 1: Configure Your Mobile Dashboard
-
-Once your device is online, it's time to create the control panel.
-
-### Downloa Blynk App From Playstore / App Store
-
-Login with gmail 
-and login web deshboard with same gmail
-
-<b> phone app setup </b>
-
-Tap the **➕ Add Widget** button and add:
-
-### 🎛 Switch Widget
-
-Configure the widget as follows:
+### 2️⃣ Add a Switch Widget
+Configure the switch as:
 
 | Setting | Value |
 |----------|--------|
-| Widget Type | Switch |
 | Datastream | V0 |
 | Mode | Switch |
-| Label | Relay Control |
 
-Save the dashboard and exit edit mode.
+### 3️⃣ Save & Run
+Exit edit mode and start controlling your appliance instantly.
 
----
-
-## 📲 Final Dashboard Preview
+### 🎛 Dashboard Preview
 
 ```text
-┌────────────────────────────┐
-│     🏠 Home Automation     │
-├────────────────────────────┤
-│                            │
-│      💡 Relay Control      │
-│                            │
-│          ON / OFF          │
-│                            │
-└────────────────────────────┘
+┌──────────────────────┐
+│ 🏠 Home Automation   │
+├──────────────────────┤
+│ 💡 Relay Control     │
+│      ON / OFF        │
+└──────────────────────┘
 ```
 
-This switch will directly control the relay connected to the ESP32.
+### ⚡ Operation
 
----
+```text
+Switch ON  → Relay ON  → Bulb ON 💡
 
-# ⚡ Step 8: Power Up & Test
+Switch OFF → Relay OFF → Bulb OFF 🌙
+```
 
-### Start the System
-
-1️⃣ Power ON the ESP32
-
-2️⃣ Connect ESP32 to Wi-Fi
-
-3️⃣ Wait for Blynk Cloud Connection
-
-4️⃣ Open the Blynk Mobile App
-
-5️⃣ Press the Relay Switch
-
-
+Control your home appliances securely from anywhere using the Blynk IoT mobile application.
