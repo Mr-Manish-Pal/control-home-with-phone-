@@ -1,0 +1,129 @@
+# 📱 Blynk IoT Setup Guide
+
+Follow the steps below to connect the ESP32 Home Automation project with the Blynk IoT platform.
+
+---
+
+## Step 1: Create a Blynk Account
+
+1. Install the **Blynk IoT** app from:
+   - Android Play Store
+   - Apple App Store
+
+2. Create a new Blynk account or log in.
+
+---
+
+## Step 2: Create a Template
+
+Open:
+
+https://blynk.cloud
+
+Navigate to:
+
+```text
+Developer Zone → Templates → New Template
+```
+
+Configure:
+
+| Setting | Value |
+|----------|--------|
+| Template Name | Home Automation |
+| Hardware | ESP32 |
+| Connection Type | Wi-Fi |
+
+Click **Done**.
+
+---
+
+## Step 3: Create Datastream
+
+Open:
+
+```text
+Template → Datastreams → New Datastream
+```
+
+Select:
+
+```text
+Virtual Pin
+```
+
+Configuration:
+
+| Parameter | Value |
+|------------|--------|
+| Name | Relay |
+| Virtual Pin | V0 |
+| Data Type | Integer |
+| Min Value | 0 |
+| Max Value | 1 |
+| Default Value | 0 |
+
+Save the Datastream.
+
+---
+
+## Step 4: Create a Device
+
+Navigate to:
+
+```text
+Devices → New Device
+```
+
+Select:
+
+```text
+From Template
+```
+
+Choose:
+
+```text
+Home Automation
+```
+
+Create Device.
+
+---
+
+## Step 5: Copy Credentials
+
+Open the device information page and copy:
+
+```cpp
+BLYNK_TEMPLATE_ID
+BLYNK_TEMPLATE_NAME
+BLYNK_AUTH_TOKEN
+```
+
+Example:
+
+```cpp
+#define BLYNK_TEMPLATE_ID "TMPLxxxxxxx"
+#define BLYNK_TEMPLATE_NAME "Home Automation"
+#define BLYNK_AUTH_TOKEN "xxxxxxxxxxxxxxxx"
+```
+
+---
+
+## Step 6: Configure Firmware
+
+Replace the credentials in the source code:
+
+```cpp
+#define BLYNK_TEMPLATE_ID "YOUR_TEMPLATE_ID"
+#define BLYNK_TEMPLATE_NAME "YOUR_TEMPLATE_NAME"
+#define BLYNK_AUTH_TOKEN "YOUR_AUTH_TOKEN"
+
+char ssid[] = "YOUR_WIFI_NAME";
+char pass[] = "YOUR_WIFI_PASSWORD";
+```
+
+Upload the code to ESP32.
+
+---
