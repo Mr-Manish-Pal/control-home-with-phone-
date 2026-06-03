@@ -13,6 +13,21 @@
 
 ---
 
+
+## 👨‍💻 Author
+
+### Manish Pal
+
+**B.Tech – Electronics & Communication Engineering (ECE)**
+
+Interests:
+
+- Embedded Systems
+- ESP32 Development
+- IoT Solutions
+- Home Automation
+- Electronics Design
+
 ## 📌 Overview
 
 ESP32 Home Automation is an IoT-based smart control system that enables users to remotely operate electrical appliances such as bulbs, fans, and sockets using a smartphone.
@@ -95,23 +110,6 @@ This project demonstrates the practical implementation of:
 ---
 
 
----
-
-## 🔐 Configuration
-
-Replace the following credentials before uploading:
-
-```cpp
-#define BLYNK_TEMPLATE_ID "YOUR_TEMPLATE_ID"
-#define BLYNK_TEMPLATE_NAME "YOUR_TEMPLATE_NAME"
-#define BLYNK_AUTH_TOKEN "YOUR_AUTH_TOKEN"
-
-char ssid[] = "YOUR_WIFI_NAME";
-char pass[] = "YOUR_WIFI_PASSWORD";
-```
-
----
-
 ## 🎯 Applications
 
 - Smart Home Automation
@@ -121,7 +119,6 @@ char pass[] = "YOUR_WIFI_PASSWORD";
 - Remote Appliance Control
 - Smart Office Automation
 
----
 
 ## 🔮 Future Improvements
 
@@ -134,7 +131,6 @@ char pass[] = "YOUR_WIFI_PASSWORD";
 - Scheduling System
 - Notification Alerts
 
----
 
 ## 🛡 Safety Warning
 
@@ -143,26 +139,7 @@ This project involves AC mains voltage.
 - Disconnect power before wiring.
 - Use proper insulation.
 - Avoid exposed conductors.
-- Verify connections carefully before powering ON.
-
----
-
-## 👨‍💻 Author
-
-### Manish Pal
-
-**B.Tech – Electronics & Communication Engineering (ECE)**
-
-Interests:
-
-- Embedded Systems
-- ESP32 Development
-- IoT Solutions
-- Home Automation
-- Electronics Design
-
-
----
+- Verify connections carefully before powering ON
 
 ## ⭐ Support
 
