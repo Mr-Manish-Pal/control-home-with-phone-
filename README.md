@@ -1,307 +1,179 @@
 # 🏠 ESP32 Home Automation using Blynk IoT
 
-![ESP32](https://img.shields.io/badge/ESP32-IoT-blue)
-![Blynk](https://img.shields.io/badge/Blynk-IoT-green)
-![C++](https://img.shields.io/badge/Language-C++-orange)
-![PlatformIO](https://img.shields.io/badge/Platform-PlatformIO-purple)
+<p align="center">
+  <img src="https://img.shields.io/badge/ESP32-IoT-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Blynk-IoT-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/C++-Embedded-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/PlatformIO-VS_Code-purple?style=for-the-badge">
+</p>
 
-
-A complete IoT-based Home Automation System built using ESP32 and Blynk IoT. This project allows users to remotely control AC appliances such as bulbs, fans, and other devices through the Blynk mobile application from anywhere in the world.
-
----
-
-# 📖 Overview
-
-Home Automation is one of the most popular applications of the Internet of Things (IoT). This project demonstrates how an ESP32 microcontroller can be connected to the Blynk IoT platform to remotely control electrical appliances over Wi-Fi.
-
-The system uses an ESP32 development board connected to a relay module. Commands sent from the Blynk mobile application are received by the ESP32 through the internet and used to switch connected appliances ON or OFF.
-
-This project serves as an excellent beginner-to-intermediate IoT project and can be expanded into a complete smart home ecosystem.
+<p align="center">
+  <b>Control Electrical Appliances From Anywhere Using ESP32 & Blynk Cloud</b>
+</p>
 
 ---
 
-# ✨ Features
+## 📌 Overview
 
-## 📱 Mobile Control
+ESP32 Home Automation is an IoT-based smart control system that enables users to remotely operate electrical appliances such as bulbs, fans, and sockets using a smartphone.
 
-- Control appliances from anywhere in range 
+The project utilizes ESP32, a relay module, Wi-Fi connectivity, and the Blynk IoT platform to provide real-time remote switching over the internet.
+
+This project demonstrates the practical implementation of:
+
+- Internet of Things (IoT)
+- Embedded Systems
+- Cloud Communication
+- Mobile Application Integration
+- Home Automation
+
+---
+
+## ✨ Features
+
+### 📱 Smartphone Control
+- Turn appliances ON/OFF remotely
 - Real-time switching
 - User-friendly mobile interface
-- Instant response
 
-## 🌐 IoT Connectivity
+### 🌐 IoT Connectivity
+- Wi-Fi-based communication
+- Blynk Cloud integration
+- Remote access from anywhere
 
-- Wi-Fi based communication
-- Cloud connectivity via Blynk
-- Remote access over the internet
-
-## ⚡ Appliance Control
-
-- Bulb ON/OFF
-- Fan ON/OFF
+### ⚡ Appliance Automation
+- Bulb Control
+- Fan Control
 - Socket Control
-- Other AC Loads
+- Relay-based switching
 
-## 🔄 Real-Time Monitoring
-
-- Live device status
-- Instant switching feedback
+### 🔄 Real-Time Operation
+- Instant response
 - Cloud synchronization
+- Device status updates
 
-## 🛡 Reliability
-
+### 🛡 Reliability
 - Automatic reconnection
-- Stable ESP32 Wi-Fi communication
-- Secure Blynk authentication
+- Secure authentication
+- Stable communication
 
 ---
 
-# 🏗 System Architecture
+## 🎥 Project Demonstration
+
+[![ESP32 Home Automation Demo](https://img.youtube.com/vi/8EZps-X8OYU/maxresdefault.jpg)](https://youtu.be/8EZps-X8OYU)
+
+📺 Click the thumbnail above to watch the complete project demonstration.
+
+---
+
+## 🏗 System Architecture
 
 ```text
-             ┌─────────────────┐
-             │  Blynk Mobile   │
-             │      App        │
-             └────────┬────────┘
-                      │
-                      │ Internet
-                      │
-             ┌────────▼────────┐
-             │  Blynk Cloud    │
-             └────────┬────────┘
-                      │
-                 Wi-Fi Network
-                      │
-             ┌────────▼────────┐
-             │      ESP32      │
-             └────────┬────────┘
-                      │
-                      │ GPIO 13
-                      │
-             ┌────────▼────────┐
-             │ Relay Module    │
-             └────────┬────────┘
-                      │
-                      │
-             ┌────────▼────────┐
-             │ AC Appliance    │
-             │ (Bulb/Fan)      │
-             └─────────────────┘
+          Smartphone
+               │
+               ▼
+         Blynk Cloud
+               │
+           Internet
+               │
+               ▼
+            ESP32
+               │
+         GPIO Control
+               │
+               ▼
+        Relay Module
+               │
+               ▼
+        AC Appliance
 ```
 
 ---
 
-# 🔌 Hardware Components
+## 🔌 Hardware Components
 
 | Component | Quantity |
 |------------|----------|
 | ESP32 Development Board | 1 |
-| 1-Channel optocoupler Relay Module | 1 |
-| AC Bulb / Fan | 1 |
-| Breadboard | 1 |
+| Relay Module | 1 |
+| AC Bulb/Fan | 1 |
 | Jumper Wires | Multiple |
+| Breadboard | 1 |
 | Mobile Phone | 1 |
 | Wi-Fi Network | 1 |
 
 ---
 
-# 🔧 Circuit Connections
+## 🔧 Circuit Connections
 
-## ESP32 ↔ Relay Module
+### ESP32 → Relay Module
 
-| Relay Module | ESP32 |
-|-------------|--------|
-| VCC | VIN / 5V |
+| ESP32 | Relay |
+|--------|--------|
+| GPIO 13 | IN |
 | GND | GND |
-| IN | GPIO 13 |
+| VIN / 5V | VCC |
+
+### Relay → AC Bulb
+
+| Relay Terminal | Connection |
+|----------------|------------|
+| COM | AC Phase Input |
+| NO | Bulb Phase |
+| NC | Not Used |
+| Neutral | Direct to Bulb |
 
 ---
 
-## Relay ↔ AC Bulb
+## 📱 Blynk Configuration
 
-### Relay Terminals
+### Datastream
 
-| Terminal | Function |
-|-----------|----------|
-| COM | Common |
-| NO | Normally Open |
-| NC | Normally Closed |
-
-### Recommended Connection
-
-```text
-AC Phase
-    │
-    ▼
-   COM
-    │
- Relay
-    │
-   NO
-    │
-    ▼
- Bulb Phase
-
-Neutral ─────────────► Bulb Neutral
-```
-
-### Working
-
-- Relay OFF → Bulb OFF
-- Relay ON → Bulb ON
-
----
-
-# 📱 Blynk Setup
-
-## Step 1: Create Template
-
-Create a new template in Blynk Console:
-
-- Hardware: ESP32
-- Connection Type: Wi-Fi
-
----
-
-## Step 2: Create Datastream
-
-| Property | Value |
-|----------|--------|
+| Parameter | Value |
+|------------|--------|
 | Name | Relay |
 | Virtual Pin | V0 |
 | Data Type | Integer |
-| Min | 0 |
-| Max | 1 |
+| Range | 0 - 1 |
+
+### Dashboard Widget
+
+| Widget | Datastream |
+|----------|------------|
+| Switch | V0 |
 
 ---
 
-## Step 3: Add Dashboard Widget
-
-Add a:
-
-- Switch Widget
-
-Configure:
-
-| Setting | Value |
-|----------|--------|
-| Datastream | V0 |
-| Mode | Switch |
-
----
-
-## Step 4: Create Device
-
-Create a device from the template and copy:
-
-- Template ID
-- Template Name
-- Auth Token
-
----
-
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 ESP32-Home-Automation/
 │
-├── include/
-│
-├── lib/
-│
 ├── src/
 │   └── main.cpp
 │
+├── include/
+├── lib/
 ├── test/
 │
-├── .gitignore
+├── images/
+│   ├── hardware-setup.jpg
+│   ├── circuit-diagram.png
+│   └── blynk-dashboard.jpg
 │
 ├── platformio.ini
-│
-├── README.md
-│
-└── images/
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ---
 
-# 💻 Software Requirements
 
-## Development Environment
+## 🔐 Configuration
 
-- Visual Studio Code
-- PlatformIO Extension
-
-## Programming Language
-
-- C++
-
-## Libraries
-
-```cpp
-#include <WiFi.h>
-#include <WiFiClient.h>
-#include <BlynkSimpleEsp32.h>
-```
-
----
-
-# ⚙️ Program Flow
-
-```text
-ESP32 Boot
-    │
-    ▼
-Connect to Wi-Fi
-    │
-    ▼
-Connect to Blynk Cloud
-    │
-    ▼
-Wait for User Command
-    │
-    ▼
-Switch ON ?
- ┌──┴───┐
- │      │
-YES     NO
- │      │
- ▼      ▼
-Relay   Relay
- ON      OFF
- │        │
- ▼        ▼
-Bulb ON  Bulb OFF
-```
-
----
-
-# 🚀 Installation
-
-## Clone Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/ESP32-Home-Automation.git
-```
-
----
-
-## Open Project
-
-```bash
-cd ESP32-Home-Automation
-code .
-```
-
----
-
-## Install Dependencies
-
-PlatformIO automatically installs required libraries.
-
----
-
-## Update Credentials
+Replace the following credentials before uploading:
 
 ```cpp
 #define BLYNK_TEMPLATE_ID "YOUR_TEMPLATE_ID"
@@ -314,85 +186,60 @@ char pass[] = "YOUR_WIFI_PASSWORD";
 
 ---
 
-## Upload Firmware
+## 📸 Screenshots
 
-```bash
-pio run --target upload
-```
+### Hardware Setup
 
----
+![Hardware Setup](images/hardware-setup.jpg)
 
-## Monitor Serial Output
+### Circuit Diagram
 
-```bash
-pio device monitor
-```
+![Circuit Diagram](images/circuit-diagram.png)
 
----
+### Blynk Dashboard
 
-
-Then display them:
-
-```markdown
-
-
-# 🎥 Project Demonstration
-
-## Watch Full Working Video
-
-[![ESP32 Home Automation](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](YOUR_VIDEO_LINK)
-
-Click the thumbnail above to watch the complete project demonstration.
+![Blynk Dashboard](images/blynk-dashboard.jpg)
 
 ---
 
-# 🎯 Applications
+## 🎯 Applications
 
 - Smart Home Automation
-- Remote Appliance Control
-- Smart Offices
-- Energy Saving Systems
 - IoT Learning Projects
 - Embedded Systems Projects
 - Engineering Mini Projects
-- Automation Research
+- Remote Appliance Control
+- Smart Office Automation
 
 ---
 
-# 🔮 Future Improvements
+## 🔮 Future Improvements
 
-- Multiple Relay Control
-- Voice Control using Google Assistant
+- Multi-Relay Support
+- Voice Control
+- Google Assistant Integration
 - Alexa Integration
-- MQTT Communication
+- MQTT Protocol
 - Energy Monitoring
-- ESP32 Web Server
 - Scheduling System
-- Mobile Notifications
-- RFID Access Control
-- AI-Based Automation
+- Notification Alerts
 
 ---
 
-# 🛡 Safety Precautions
+## 🛡 Safety Warning
 
-⚠️ This project uses AC mains voltage.
-
-Always:
+This project involves AC mains voltage.
 
 - Disconnect power before wiring.
 - Use proper insulation.
-- Avoid touching exposed wires.
-- Test connections carefully.
-- Use relay modules with optocoupler isolation.
+- Avoid exposed conductors.
+- Verify connections carefully before powering ON.
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
----
-
-#  Manish Pal
+### Manish Pal
 
 **B.Tech – Electronics & Communication Engineering (ECE)**
 
@@ -404,20 +251,23 @@ Interests:
 - Home Automation
 - Electronics Design
 
-GitHub: https://github.com/YOUR_USERNAME
 
 ---
 
-# ⭐ Support
+## ⭐ Support
 
-If you found this project helpful:
+If you found this project useful:
 
-⭐ Star this repository
+⭐ Star the repository
 
-🍴 Fork this repository
+🍴 Fork the repository
 
-📢 Share it with others
- 
- SUBSCRIBE
+📢 Share with others
+
+   SUBSCRIBE 
 
 ---
+
+## 📄 License
+
+This project is released for educational and learning purposes.
