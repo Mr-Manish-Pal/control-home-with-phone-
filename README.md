@@ -61,7 +61,7 @@ This project demonstrates the practical implementation of:
 
 ## 🎥 Project Demonstration
 
-[![ESP32 Home Automation Demo](https://img.youtube.com/vi/8EZps-X8OYU/maxresdefault.jpg)](https://youtu.be/8EZps-X8OYU)
+[![ESP32 Home Automation Demo]
 
 📺 Click the thumbnail above to watch the complete project demonstration.
 
