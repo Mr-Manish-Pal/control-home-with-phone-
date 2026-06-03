@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <b>Control Electrical Appliances From Anywhere Using ESP32 & Blynk Cloud</b>
+  <b>Control Home Appliances From Anywhere Using ESP32 & Blynk Cloud</b>
 </p>
 
 ---
