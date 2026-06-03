@@ -1,1 +1,38 @@
-manish
+
+## 🔧 Circuit Connections
+
+### ESP32 → Relay Module
+
+| ESP32 | Relay |
+|--------|--------|
+| GPIO 13 | IN |
+| GND | GND |
+| VIN / 5V | VCC |
+
+### Relay → AC Bulb
+
+| Relay Terminal | Connection |
+|----------------|------------|
+| COM | AC Phase Input |
+| NO | Bulb Phase |
+| NC | Not Used |
+| Neutral | Direct to Bulb |
+
+---
+
+## 📱 Blynk Configuration
+
+### Datastream
+
+| Parameter | Value |
+|------------|--------|
+| Name | Relay |
+| Virtual Pin | V0 |
+| Data Type | Integer |
+| Range | 0 - 1 |
+
+### Dashboard Widget
+
+| Widget | Datastream |
+|----------|------------|
+| Switch | V0 |  
