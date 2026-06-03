@@ -19,6 +19,16 @@ ESP32 Home Automation is an IoT-based smart control system that enables users to
 
 The project utilizes ESP32, a relay module, Wi-Fi connectivity, and the Blynk IoT platform to provide real-time remote switching over the internet.
 
+
+
+## 🎥 Project Demonstration
+
+[![ESP32 Home Automation Demo]
+
+📺 Click the thumbnail above to watch the complete project demonstration.
+
+---
+
 This project demonstrates the practical implementation of:
 
 - Internet of Things (IoT)
@@ -59,13 +69,6 @@ This project demonstrates the practical implementation of:
 
 ---
 
-## 🎥 Project Demonstration
-
-[![ESP32 Home Automation Demo]
-
-📺 Click the thumbnail above to watch the complete project demonstration.
-
----
 
 ## 🏗 System Architecture
 
@@ -91,85 +94,8 @@ This project demonstrates the practical implementation of:
 
 ---
 
-## 🔌 Hardware Components
-
-| Component | Quantity |
-|------------|----------|
-| ESP32 Development Board | 1 |
-| Relay Module | 1 |
-| AC Bulb/Fan | 1 |
-| Jumper Wires | Multiple |
-| Breadboard | 1 |
-| Mobile Phone | 1 |
-| Wi-Fi Network | 1 |
 
 ---
-
-## 🔧 Circuit Connections
-
-### ESP32 → Relay Module
-
-| ESP32 | Relay |
-|--------|--------|
-| GPIO 13 | IN |
-| GND | GND |
-| VIN / 5V | VCC |
-
-### Relay → AC Bulb
-
-| Relay Terminal | Connection |
-|----------------|------------|
-| COM | AC Phase Input |
-| NO | Bulb Phase |
-| NC | Not Used |
-| Neutral | Direct to Bulb |
-
----
-
-## 📱 Blynk Configuration
-
-### Datastream
-
-| Parameter | Value |
-|------------|--------|
-| Name | Relay |
-| Virtual Pin | V0 |
-| Data Type | Integer |
-| Range | 0 - 1 |
-
-### Dashboard Widget
-
-| Widget | Datastream |
-|----------|------------|
-| Switch | V0 |
-
----
-
-## 📂 Project Structure
-
-```text
-ESP32-Home-Automation/
-│
-├── src/
-│   └── main.cpp
-│
-├── include/
-├── lib/
-├── test/
-│
-├── images/
-│   ├── hardware-setup.jpg
-│   ├── circuit-diagram.png
-│   └── blynk-dashboard.jpg
-│
-├── platformio.ini
-├── .gitignore
-├── LICENSE
-└── README.md
-```
-
----
-
 
 ## 🔐 Configuration
 
@@ -183,22 +109,6 @@ Replace the following credentials before uploading:
 char ssid[] = "YOUR_WIFI_NAME";
 char pass[] = "YOUR_WIFI_PASSWORD";
 ```
-
----
-
-## 📸 Screenshots
-
-### Hardware Setup
-
-![Hardware Setup](images/hardware-setup.jpg)
-
-### Circuit Diagram
-
-![Circuit Diagram](images/circuit-diagram.png)
-
-### Blynk Dashboard
-
-![Blynk Dashboard](images/blynk-dashboard.jpg)
 
 ---
 
