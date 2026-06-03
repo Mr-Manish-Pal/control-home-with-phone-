@@ -1,6 +1,6 @@
-#define BLYNK_TEMPLATE_ID "TMPL3_72gv8j6"
+#define BLYNK_TEMPLATE_ID "TMPL3_72gv***"
 #define BLYNK_TEMPLATE_NAME "led moniter"
-#define BLYNK_AUTH_TOKEN "ORnL8dMPo8_A34nBwUgksChiAXVDecdQ"
+#define BLYNK_AUTH_TOKEN "ORnL8dMP***********************"
 
 #include <WiFi.h>
 #include <WiFiClient.h>
